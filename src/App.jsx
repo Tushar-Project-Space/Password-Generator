@@ -31,8 +31,11 @@ const App = () => {
   },[password])
 
   return (
-    <div>
-      <div>
+    <>
+  <div className="title">Random Password Generator</div>
+
+    <div className='container'>
+      <div className='inputBtn'>
         <input type="text" 
         value={password} 
         readOnly 
@@ -42,7 +45,7 @@ const App = () => {
         <button onClick={copyToClipBoard}>Copy</button>
       </div>
 
-      <div>
+      <div className='range'>
         <input type="range"
         min={8}
         max={30}
@@ -64,6 +67,7 @@ const App = () => {
         <label htmlFor="char">Character</label>
       </div>
     </div>
+    </>
   )
 }
 
